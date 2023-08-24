@@ -19,10 +19,8 @@ RUN apt-get update && apt-get install -y \
 
 # retrieve build args
 ARG GITHUB_ACCESS_TOKEN
-ARG GITLAB_ACCESS_TOKEN
 ARG EIGEN_REPO
 ARG CATALYTIC_FOAM_REPO
-
 
 # make code base in homedir read-/write-/executable to USER
 RUN chmod -R 0777 /home/openfoam
@@ -46,7 +44,7 @@ COPY .compile mybashrc
 RUN source /opt/openfoam8/etc/bashrc && source mybashrc && ./Allwmake
 
 # add code base
-WORKDIR /home/openfoam/reaxpro_wrappers
+WORKDIR /home/openfoam/simphony-catalytic
 COPY osp osp
 COPY tests tests
 COPY examples examples
@@ -64,12 +62,15 @@ RUN \
 ################################## target: dev ##################################
 from base as develop
 
-WORKDIR /home/openfoam/reaxpro_wrappers
+ARG WRAPPER_DEPS_INSTALL
+ARG WRAPPER_DEPS_EXTRA
+
+WORKDIR /home/openfoam/simphony-catalytic
 
 # # install deps for pytests
 RUN pip install --upgrade pip
-RUN pip install osp-core
-RUN pip install .[dev,pre_commit,tests]
+RUN pip install osp-core $WRAPPER_DEPS_INSTALL
+RUN pip install .[dev,pre_commit,tests] $WRAPPER_DEPS_EXTRA
 
 # go /app dir
 WORKDIR /app
@@ -82,10 +83,13 @@ RUN chown openfoam:openfoam /tmp
 
 from base as production
 
-WORKDIR /home/openfoam/reaxpro_wrappers
+ARG WRAPPER_DEPS_INSTALL
+ARG WRAPPER_DEPS_EXTRA
+
+WORKDIR /home/openfoam/simphony-catalytic
 USER openfoam
 
 # # install wrappers and their python-dependencies
 RUN pip install --upgrade pip
-RUN pip install osp-core
-RUN pip install .
+RUN pip install osp-core $WRAPPER_DEPS_INSTALL
+RUN pip install . $WRAPPER_DEPS_EXTRA
