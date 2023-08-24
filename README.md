@@ -30,10 +30,10 @@ More important, make sure that you have the catalyticFOAM-solver installed on yo
 
 ### Python dependencies
 
-First of all, you will need to install OSP-core
+First of all, you will need to install OSP-core, plams, AdaptiveDesignProcedure and pyZacros (all except osp-core are not on PyPI yet unfortunately):
 
 ```shell
-(env) user@computer:~/reaxpro-wrappers$ pip install osp-core
+(env) user@computer:~/reaxpro-wrappers$ pip install osp-core https://github.com/SCM-NV/pyZacros/archive/refs/tags/v.1.2.zip https://github.com/mbracconi/adaptiveDesignProcedure/archive/refs/tags/v1.4.0.zip git+https://github.com/SCM-NV/PLAMS@7661960a9db53249a0b77935dacc8a7668c2489b
 ```
 
 Then, install the wrapper. Simply type:
