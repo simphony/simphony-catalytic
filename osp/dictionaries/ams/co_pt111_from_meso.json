@@ -1,0 +1,357 @@
+{
+    "zgb_model": {
+        "simulation_input": {
+            "random_seed": 10,
+            "temperature": 273.15,
+            "pressure": 1.01325,
+            "n_gas_species": 1,
+            "gas_specs_names": ["CO"],
+            "gas_molar_fracs": [0.1],
+            "snapshots": ["on time", 3.5],
+            "species_numbers": ["on time", 3.5],
+            "process_statistics": ["on time", 3.5],
+            "max_time": 0.00001
+        },
+
+        "lattice_input": {"xyz_file": "9a1e6c07-840a-4182-8ed5-60212167aa4b"},
+
+        "energetics_input": [
+        { "name": "CO_Point_brg",
+            "sites": 1,
+            "lattice_state": [1,  "CO*",  1],
+            "site_types": ["brg"],
+            "cluster_eng": -2.36},
+
+        { "name": "CO_Point_hol",
+            "sites": 1,
+            "lattice_state": [1,  "CO*",  1],
+            "site_types": ["hol"],
+            "cluster_eng": -1.85},
+
+        { "name": "O_Point_brg",
+            "sites": 1,
+            "lattice_state": [1,  "O*",  1],
+            "site_types": ["brg"],
+            "cluster_eng": -1.51},
+
+        { "name": "CO-O_Pair_brg",
+            "sites": 2,
+            "neighboring": ["1-2"],
+            "lattice_state": [[1,  "CO*",  1], [2, "O*", 1] ],
+            "site_types": ["hol", "hol"],
+            "cluster_eng": 0.05},
+
+        { "name": "CO2_Bidentat_brg_hol",
+            "sites": 2,
+            "neighboring": ["1-2"],
+            "lattice_state": [[1,  "CO2*",  1], [1, "CO2*", 2] ],
+            "site_types": ["brg", "hol"],
+            "cluster_eng": -3.42}
+        ],
+
+        "mechanism_input": [
+            {"reversible_step": "O2_adsorption",
+                "gas_reacs_prods": ["O2", -1],
+                "sites": 2,
+                "neighboring": ["1-2"],
+                "initial": [[ 1, "*", 1], [ 2, "*", 1]],
+                "final": [[1, "O*", 1], [2, "O*", 1]],
+                "variant": {"name": "brg_brg",
+                            "site_types": ["brg", "brg"],
+                            "pre_expon": 7.980e+07,
+                            "pe_ratio":  9.431e-09,
+                            "activ_eng": 0.00}},
+
+            {"reversible_step": "CO_adsorption",
+                "gas_reacs_prods": ["CO", -1],
+                "sites": 1,
+                "initial": [ 1, "*", 1],
+                "final":   [1, "CO*", 1],
+                "variant": {"name": "brg",
+                            "site_types": ["brg"],
+                            "pre_expon": 4.265e+07,
+                            "pe_ratio":  6.563e-09,
+                            "activ_eng": 0.00}},
+
+            {"reversible_step": "CO_O_oxidation",
+                "gas_reacs_prods": ["CO2", 1],
+                "sites": 2,
+                "neighboring": ["1-2"],
+                "initial": [[1, "CO*", 1], [2, "O*", 1]],
+                "final":   [[1, "*", 1], [1, "*", 1]],
+                "variant": {"name": "brg_brg",
+                            "site_types": ["brg", "brg"],
+                            "pre_expon": 2.786e+12,
+                            "pe_ratio":  3.231e+07,
+                            "activ_eng": 0.52}
+            }
+        ]
+    },
+    "adp": {
+        "min": 0.2,
+        "max": 0.8,
+        "num": 5
+    },
+    "catalyticfoam": {
+        "chemical_species": [
+            {
+            "composition": "O2",
+            "mass_fraction": 0.432432432432432,
+            "boundaries": [
+                {
+                    "patch": "wedge1",
+                    "boundary_type": "Wedge"
+                },
+                {
+                    "patch": "wedge2",
+                    "boundary_type": "Wedge"
+                },
+                {
+                    "patch": "wedge3",
+                    "boundary_type": "Wedge"
+                },
+                {
+                    "patch": "wedge4",
+                    "boundary_type": "Wedge"
+                },
+                {
+                    "patch": "inlet",
+                    "boundary_type": "FixedValue",
+                    "value": 0.432432432432432
+                },
+                {
+                    "patch": "outlet",
+                    "boundary_type": "ZeroGradient"
+                },
+                {
+                    "patch": "inertWall",
+                    "boundary_type": "ZeroGradient"
+                },
+                {
+                    "patch": "reactingWall",
+                    "boundary_type": "CatalyticWall",
+                    "value": 0.432432432432432
+                }
+            ]
+            },
+            {
+            "composition": "CO",
+            "mass_fraction": 9.45945945945946e-06,
+            "boundaries": [
+                {
+                "patch": "wedge1",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "wedge2",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "wedge3",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "wedge4",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "inlet",
+                "boundary_type": "FixedValue",
+                "value": 9.45945945945946e-06
+                },
+                {
+                "patch": "outlet",
+                "boundary_type": "ZeroGradient"
+                },
+                {
+                "patch": "inertWall",
+                "boundary_type": "ZeroGradient"
+                },
+                {
+                "patch": "reactingWall",
+                "boundary_type": "CatalyticWall",
+                "value": 9.45945945945946e-06
+                }
+            ]
+            },
+            {
+            "composition": "CO2",
+            "mass_fraction": 0.567558108108108,
+            "boundaries": [
+                {
+                "patch": "wedge1",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "wedge2",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "wedge3",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "wedge4",
+                "boundary_type": "Wedge"
+                },
+                {
+                "patch": "inlet",
+                "boundary_type": "FixedValue",
+                "value": 0.567558108108108
+                },
+                {
+                "patch": "outlet",
+                "boundary_type": "ZeroGradient"
+                },
+                {
+                "patch": "inertWall",
+                "boundary_type": "ZeroGradient"
+                },
+                {
+                "patch": "reactingWall",
+                "boundary_type": "CatalyticWall",
+                "value": 0.567558108108108
+                }
+            ]
+            }
+        ],
+        "velocity": {
+            "value": [
+            0.0,
+            0.0,
+            1.0
+            ],
+            "boundaries": [
+            {
+                "patch": "inlet",
+                "boundary_type": "FixedValue",
+                "value": [
+                0.0,
+                0.0,
+                1.0
+                ]
+            },
+            {
+                "patch": "outlet",
+                "boundary_type": "ZeroGradient"
+            },
+            {
+                "patch": "inertWall",
+                "boundary_type": "FixedValue",
+                "value": [
+                0.0,
+                0.0,
+                1.0
+                ]
+            },
+            {
+                "patch": "reactingWall",
+                "boundary_type": "FixedValue",
+                "value": [
+                0.0,
+                0.0,
+                1.0
+                ]
+            },
+            {
+                "patch": "wedge1",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge2",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge3",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge4",
+                "boundary_type": "Wedge"
+            }
+            ]
+        },
+        "temperature": {
+            "value": 900.0,
+            "boundaries": [
+            {
+                "patch": "inlet",
+                "boundary_type": "FixedValue",
+                "value": 900.0
+            },
+            {
+                "patch": "outlet",
+                "boundary_type": "ZeroGradient"
+            },
+            {
+                "patch": "inertWall",
+                "boundary_type": "ZeroGradient"
+            },
+            {
+                "patch": "reactingWall",
+                "boundary_type": "CatalyticWall",
+                "value": 900.0
+            },
+            {
+                "patch": "wedge1",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge2",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge3",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge4",
+                "boundary_type": "Wedge"
+            }
+            ]
+        },
+        "pressure": {
+            "value": 100000.0,
+            "boundaries": [
+            {
+                "patch": "inlet",
+                "boundary_type": "ZeroGradient"
+            },
+            {
+                "patch": "outlet",
+                "boundary_type": "FixedValue",
+                "value": 100000.0
+            },
+            {
+                "patch": "inertWall",
+                "boundary_type": "ZeroGradient"
+            },
+            {
+                "patch": "reactingWall",
+                "boundary_type": "ZeroGradient"
+            },
+            {
+                "patch": "wedge1",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge2",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge3",
+                "boundary_type": "Wedge"
+            },
+            {
+                "patch": "wedge4",
+                "boundary_type": "Wedge"
+            }
+            ]
+        },
+        "catalyst_amount": 1.5e-05,
+        "solver_options": {
+            "use_energy_equation": true,
+            "turbulence_model": "LaminarModel"
+        }
+    }
+}

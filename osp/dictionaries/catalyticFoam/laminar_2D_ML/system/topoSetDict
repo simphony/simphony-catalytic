@@ -1,0 +1,143 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+/*
+actions
+(
+{
+	name		csBaffle0;
+	type 		cellSet;
+	action 		new;
+	source 		zoneToCell;
+	sourceInfo
+		{
+		name blockSOTTO1;
+		}
+}
+
+{
+	name 		csBaffle0_1;
+	type 		cellSet;
+	action 		new;
+	source 		zoneToCell;
+	sourceInfo
+		{
+		name blockSOTTO3;// Matching faces
+		}
+}
+
+// convert to faces
+{
+	name 		fsBaffle0;
+	type 		faceSet;
+	action 		new;
+	source 		cellToFace;
+	sourceInfo
+	{
+		set 	csBaffle0;
+		option	all;
+	}
+}
+
+// get the common subset
+{
+	name 		fsBaffle0;
+	type 		faceSet;
+	action 		subset;
+	source 		cellToFace;
+	sourceInfo
+	{
+		set 	csBaffle0_1;
+		option	all;
+	}
+}
+
+// convert to a Zone
+{
+	name 		fzsBaffle0;
+	type 		faceZoneSet;
+	action 		new;
+	source		setToFaceZone;
+	sourceInfo
+	{
+		faceSet fsBaffle0;
+	}
+}
+
+//END OF BAFFLE SOTTO----------------------------------------------------------
+
+{
+	name		csBaffle10;
+	type 		cellSet;
+	action 		new;
+	source 		zoneToCell;
+	sourceInfo
+		{
+		name blockSOPRA2;
+		}
+}
+
+{
+	name 		csBaffle10_1;
+	type 		cellSet;
+	action 		new;
+	source 		zoneToCell;
+	sourceInfo
+		{
+		name blockSOPRA4;// Matching faces
+		}
+}
+
+// convert to faces
+{
+	name 		fsBaffle10;
+	type 		faceSet;
+	action 		new;
+	source 		cellToFace;
+	sourceInfo
+	{
+		set 	csBaffle10;
+		option	all;
+	}
+}
+
+// get the common subset
+{
+	name 		fsBaffle10;
+	type 		faceSet;
+	action 		subset;
+	source 		cellToFace;
+	sourceInfo
+	{
+		set 	csBaffle10_1;
+		option	all;
+	}
+}
+
+// convert to a Zone
+{
+	name 		fzsBaffle10;
+	type 		faceZoneSet;
+	action 		new;
+	source		setToFaceZone;
+	sourceInfo
+	{
+		faceSet fsBaffle10;
+	}
+}
+//END OF BAFFLE SOPRA----------------------------------------------------------
+
+);

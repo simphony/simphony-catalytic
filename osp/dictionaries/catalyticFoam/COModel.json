@@ -1,0 +1,262 @@
+{
+    "chemical_species": [
+      {
+        "composition": "O2",
+        "mass_fraction": 0.432432432432432,
+        "boundaries": [
+          {
+            "patch": "wedge1",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge2",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge3",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge4",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "inlet",
+            "boundary_type": "FixedValue",
+            "value": 0.432432432432432
+          },
+          {
+            "patch": "outlet",
+            "boundary_type": "ZeroGradient"
+          },
+          {
+            "patch": "inertWall",
+            "boundary_type": "ZeroGradient"
+          },
+          {
+            "patch": "reactingWall",
+            "boundary_type": "CatalyticWall",
+            "value": 0.432432432432432
+          }
+        ]
+      },
+      {
+        "composition": "CO",
+        "mass_fraction": 9.45945945945946e-06,
+        "boundaries": [
+          {
+            "patch": "wedge1",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge2",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge3",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge4",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "inlet",
+            "boundary_type": "FixedValue",
+            "value": 9.45945945945946e-06
+          },
+          {
+            "patch": "outlet",
+            "boundary_type": "ZeroGradient"
+          },
+          {
+            "patch": "inertWall",
+            "boundary_type": "ZeroGradient"
+          },
+          {
+            "patch": "reactingWall",
+            "boundary_type": "CatalyticWall",
+            "value": 9.45945945945946e-06
+          }
+        ]
+      },
+      {
+        "composition": "CO2",
+        "mass_fraction": 0.567558108108108,
+        "boundaries": [
+          {
+            "patch": "wedge1",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge2",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge3",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "wedge4",
+            "boundary_type": "Wedge"
+          },
+          {
+            "patch": "inlet",
+            "boundary_type": "FixedValue",
+            "value": 0.567558108108108
+          },
+          {
+            "patch": "outlet",
+            "boundary_type": "ZeroGradient"
+          },
+          {
+            "patch": "inertWall",
+            "boundary_type": "ZeroGradient"
+          },
+          {
+            "patch": "reactingWall",
+            "boundary_type": "CatalyticWall",
+            "value": 0.567558108108108
+          }
+        ]
+      }
+    ],
+    "velocity": {
+      "value": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "boundaries": [
+        {
+          "patch": "inlet",
+          "boundary_type": "FixedValue",
+          "value": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "patch": "outlet",
+          "boundary_type": "ZeroGradient"
+        },
+        {
+          "patch": "inertWall",
+          "boundary_type": "FixedValue",
+          "value": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "patch": "reactingWall",
+          "boundary_type": "FixedValue",
+          "value": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "patch": "wedge1",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge2",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge3",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge4",
+          "boundary_type": "Wedge"
+        }
+      ]
+    },
+    "temperature": {
+      "value": 900.0,
+      "boundaries": [
+        {
+          "patch": "inlet",
+          "boundary_type": "FixedValue",
+          "value": 900.0
+        },
+        {
+          "patch": "outlet",
+          "boundary_type": "ZeroGradient"
+        },
+        {
+          "patch": "inertWall",
+          "boundary_type": "ZeroGradient"
+        },
+        {
+          "patch": "reactingWall",
+          "boundary_type": "CatalyticWall",
+          "value": 900.0
+        },
+        {
+          "patch": "wedge1",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge2",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge3",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge4",
+          "boundary_type": "Wedge"
+        }
+      ]
+    },
+    "pressure": {
+      "value": 100000.0,
+      "boundaries": [
+        {
+          "patch": "inlet",
+          "boundary_type": "ZeroGradient"
+        },
+        {
+          "patch": "outlet",
+          "boundary_type": "FixedValue",
+          "value": 100000.0
+        },
+        {
+          "patch": "inertWall",
+          "boundary_type": "ZeroGradient"
+        },
+        {
+          "patch": "reactingWall",
+          "boundary_type": "ZeroGradient"
+        },
+        {
+          "patch": "wedge1",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge2",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge3",
+          "boundary_type": "Wedge"
+        },
+        {
+          "patch": "wedge4",
+          "boundary_type": "Wedge"
+        }
+      ]
+    },
+    "catalyst_amount": 1.5e-05,
+    "solver_options": {
+      "use_energy_equation": true,
+      "turbulence_model": "LaminarModel"
+    }
+  }

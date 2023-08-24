@@ -1,0 +1,436 @@
+@prefix emmo: <http://emmo.info/emmo#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<arcp://uuid,0381c208-2905-40bd-9e14-c03a8e61401d/0/U?jsonpath=internalField.1.0&jsonpath=boundaryField.inlet.direction.0> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0" ;
+    emmo:INVERSE_OF_hasSpatialFirst <http://www.osp-core.com/cuds#fdd04559-99f4-4cbb-b913-d2159893a309> .
+
+<arcp://uuid,03fd4f94-2e7f-4f09-b9a2-9b5f852120cc/0/p?jsonpath=boundaryField.reactingWall.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,0f37c63d-8c5b-45b3-b62c-337c02ad4a6b/constant/solverOptions?jsonpath=PhysicalModel.alfaCatalyst> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "1e-05" ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#2806062f-45dc-4680-85ed-16a943b43e99> .
+
+<arcp://uuid,13d1a514-808b-4331-870d-89bd02247d1a/0/p?jsonpath=boundaryField.wedge3.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,13e590ec-008a-4a87-91db-63ef61992c3d/0/U?jsonpath=internalField.1.2&jsonpath=boundaryField.inertWall.value%2520uniform.2&jsonpath=boundaryField.reactingWall.value%2520uniform.2> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0" ;
+    emmo:INVERSE_OF_hasSpatialNext <arcp://uuid,4e66d5e3-a6b8-4a2e-8f4a-32df3fbe7ece/0/U?jsonpath=internalField.1.1&jsonpath=boundaryField.inertWall.value%2520uniform.1&jsonpath=boundaryField.reactingWall.value%2520uniform.1> .
+
+<arcp://uuid,1bad8363-1490-47a0-b082-54c43909cdd1/0/CO?jsonpath=FoamFile.object> a emmo:EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527 ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "CO"^^xsd:string ;
+    emmo:INVERSE_OF_hasPart <http://www.osp-core.com/cuds#76ea5922-5aa9-4911-8e98-da9925e9bb85> .
+
+<arcp://uuid,1dfb0d1b-3f34-4dc7-8a31-f97c490fd7ec/0/O2?jsonpath=boundaryField.reactingWall.type> a emmo:EMMO_140e4b4e_4bc6_4a66_862c_a3170d265c5d ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "catalyticWall"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,2496fae0-e28d-4104-b143-33c7ad77ed43/0/N2?jsonpath=boundaryField.inertWall.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,2540be71-40a6-4edd-995b-89bdd81c344d/0/CO?jsonpath=boundaryField.wedge3.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,2dddff1b-64df-43ea-b581-6760c9f8f44e/0/p?jsonpath=boundaryField.wedge4.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,30fa145e-fcd2-4c5d-9ffe-39fcdf4a9377/0/N2?jsonpath=boundaryField.wedge4.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,35790962-cdd9-4c81-97df-2f3697a803e9/0/U?jsonpath=internalField.1.1&jsonpath=boundaryField.inlet.direction.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0" ;
+    emmo:INVERSE_OF_hasSpatialNext <http://www.osp-core.com/cuds#fdd04559-99f4-4cbb-b913-d2159893a309> .
+
+<arcp://uuid,36994eb4-4853-4dc8-8876-be5e73bc3a7c/0/U?jsonpath=boundaryField.wedge1.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,3e67ffa0-c683-4a6e-a2e9-353e4707b273/0/N2?jsonpath=boundaryField.outlet.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,416706fe-93ee-4a08-8065-cf10e4ef818d/0/CO?jsonpath=boundaryField.wedge1.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,4dda6338-3f4a-435c-a936-ccd2903e65ad/constant/thermophysicalProperties?jsonpath=kineticMechanism> a emmo:EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527 ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "kinetic/kinetics"^^xsd:string ;
+    emmo:INVERSE_OF_hasPart <http://www.osp-core.com/cuds#4f91b687-25cd-453e-ab66-90c3d6d1eab2> .
+
+<arcp://uuid,5157902d-b74c-42ae-a369-8258ac9bd1e2/0/T?jsonpath=boundaryField.wedge2.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,544bc64e-facf-44ef-b6f1-ea8c90beef50/0/O2?jsonpath=boundaryField.wedge2.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,5717960d-2364-42a8-b1f5-62f4c0e7f64d/0/p?jsonpath=boundaryField.inlet.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,5a3e47a7-6ba6-4af1-b8f5-34029e1abc6d/0/O2?jsonpath=boundaryField.wedge1.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,5dda0167-e7c1-468a-af57-92b8409841e6/0/T?jsonpath=boundaryField.wedge3.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,5fed935a-5817-49a9-a523-a1dbbe686149/0/U?jsonpath=internalField.1.2&jsonpath=boundaryField.inlet.direction.2> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0" ;
+    emmo:INVERSE_OF_hasSpatialNext <http://www.osp-core.com/cuds#fdd04559-99f4-4cbb-b913-d2159893a309> .
+
+<arcp://uuid,657c6b86-b427-4ff2-b289-a2b06e4f2ed7/0/CO?jsonpath=boundaryField.wedge4.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,65ca0f8b-739a-4fbd-a182-533e866302de/0/U?jsonpath=boundaryField.wedge2.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,687189a3-74a3-4547-bf0d-406a9142a862/0/N2?jsonpath=boundaryField.wedge3.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,72087328-222f-409f-8959-1930d9c29e07/0/O2?jsonpath=boundaryField.inertWall.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,7596e219-9bac-4dbb-b608-78a50849f63a/0/O2?jsonpath=FoamFile.object> a emmo:EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527 ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "O2"^^xsd:string ;
+    emmo:INVERSE_OF_hasPart <http://www.osp-core.com/cuds#bb696a5b-516a-4c41-9260-22e0964f1baf> .
+
+<arcp://uuid,77434632-717a-4d7d-8360-c246e5a7e35f/0/p?jsonpath=boundaryField.inertWall.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,81adf873-ae73-4dd2-a978-2e25cffe2c9a/0/CO?jsonpath=boundaryField.outlet.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,8cef2727-a79e-46b9-971f-7a7362504513/0/O2?jsonpath=boundaryField.wedge3.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,9a60f545-f66e-4867-aefb-fec25de6ed95/0/N2?jsonpath=boundaryField.wedge2.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,9bdef48a-8e87-421a-933e-b2e7bc831bdd/0/U?jsonpath=boundaryField.wedge4.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,a24bfda0-8b9e-4cd8-8045-fc2c5aa3bb39/0/T?jsonpath=boundaryField.inertWall.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,a343e09e-b6bb-4c62-b8d1-4f15c36a482f/0/p?jsonpath=boundaryField.wedge2.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,af339cc9-f9ad-4d91-ab8e-866f827ff399/0/N2?jsonpath=boundaryField.wedge1.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,b07c3d18-6f0a-4c8f-9208-5b54e22fc339/constant/solverOptions?jsonpath=PhysicalModel.energyEquation> a emmo:EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527 ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "on"^^xsd:string ;
+    emmo:INVERSE_OF_hasPart <http://www.osp-core.com/cuds#c64f3523-f90d-4f47-8890-83ffb7ed9f52> .
+
+<arcp://uuid,b3456df9-d41d-451a-be4d-b652dad59cc2/0/U?jsonpath=boundaryField.outlet.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,b35753ba-39a5-4b7f-9099-923c59d9472d/0/CO?jsonpath=boundaryField.wedge2.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,b79c854a-20df-485b-96d4-d9b1a1d91542/0/N2?jsonpath=FoamFile.object> a emmo:EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527 ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "N2"^^xsd:string ;
+    emmo:INVERSE_OF_hasPart <http://www.osp-core.com/cuds#e2ac663d-c6af-4b4d-bf76-9cca27746622> .
+
+<arcp://uuid,bd24ab44-9440-45c2-9388-012f34dcea06/0/T?jsonpath=boundaryField.wedge4.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,c03c9975-922e-4b64-a678-ff3d4a821bbb/0/T?jsonpath=boundaryField.wedge1.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,c765f4af-00fd-4ad7-a10f-7f8826c2db91/0/O2?jsonpath=boundaryField.outlet.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,c8c2c14b-ac8f-4e7b-a32b-9cd48274a7e5/constant/turbulenceProperties?jsonpath=RAS.RASModel> a emmo:EMMO_a1083d0a_c1fb_471f_8e20_a98f881ad527 ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "kEpsilon"^^xsd:string ;
+    emmo:INVERSE_OF_hasPart <http://www.osp-core.com/cuds#e469c0a0-ea87-4ed8-a9c1-8a34abcbed6d> .
+
+<arcp://uuid,da71d76c-b415-4c45-835a-631c2e038502/0/N2?jsonpath=boundaryField.reactingWall.type> a emmo:EMMO_140e4b4e_4bc6_4a66_862c_a3170d265c5d ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "catalyticWall"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,dd1c64b6-50c8-46ab-97c2-fe21ae46e974/0/T?jsonpath=boundaryField.outlet.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,def9b05f-b381-4d49-9d2b-e225c36965c9/0/O2?jsonpath=boundaryField.wedge4.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,e9c34e22-cbfe-4385-9fb1-c26238a489da/0/U?jsonpath=boundaryField.wedge3.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,ed1ed022-b280-46bc-b02a-9b3c646372b3/0/p?jsonpath=boundaryField.wedge1.type> a emmo:EMMO_1f4b9f46_e79d_47d9_a0ec_b4a748a399bb ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "wedge"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,ee70b503-8b75-475b-85cb-7510f06630de/0/CO?jsonpath=boundaryField.inertWall.type> a emmo:EMMO_6fd002a9_e0c6_4157_9e77_a55a1ffbf5bc ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "zeroGradient"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,f3e660f6-b00f-4939-88a5-83315790f1bf/0/CO?jsonpath=boundaryField.reactingWall.type> a emmo:EMMO_140e4b4e_4bc6_4a66_862c_a3170d265c5d ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "catalyticWall"^^xsd:string ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<http://www.osp-core.com/cuds#89ea686c-934c-4e8b-a6a5-b6d1e6e1f0b9> a emmo:EMMO_50b33ed3_762a_441b_a77f_e0c5a4e7e765 ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#ec6b837d-496b-4538-a959-455076068346> .
+
+<arcp://uuid,051b6a8c-b66a-46d9-a48e-99d4204b592b/0/CO?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "9.45945945945946e-06" ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#7ff59b06-c487-4be4-b0a5-6b2d5270371b> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,cb81e6c3-77f9-4774-ad2c-46d4e2799209/0/CO?jsonpath=boundaryField.inlet.type> .
+
+<arcp://uuid,261e0037-8ef5-4197-b5b2-81d32b86ec5b/0/U?jsonpath=boundaryField.reactingWall.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#d3b23a45-262e-4167-a1f2-6b8567cf57df> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,4bbcd770-c8bb-4af1-b20e-a192a00d9173/0/N2?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0.567558108108108" ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#1c56d296-487c-4bf4-ba2b-a7e7bcf8cc2c> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,c6dea9b0-7c57-41f3-a568-0bc9be15592d/0/N2?jsonpath=boundaryField.inlet.type> .
+
+<arcp://uuid,4e66d5e3-a6b8-4a2e-8f4a-32df3fbe7ece/0/U?jsonpath=internalField.1.1&jsonpath=boundaryField.inertWall.value%2520uniform.1&jsonpath=boundaryField.reactingWall.value%2520uniform.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 <arcp://uuid,13e590ec-008a-4a87-91db-63ef61992c3d/0/U?jsonpath=internalField.1.2&jsonpath=boundaryField.inertWall.value%2520uniform.2&jsonpath=boundaryField.reactingWall.value%2520uniform.2> ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0" ;
+    emmo:INVERSE_OF_hasSpatialNext <arcp://uuid,53b4a644-9620-4516-b638-be088a635d42/0/U?jsonpath=internalField.1.0&jsonpath=boundaryField.inertWall.value%2520uniform.0&jsonpath=boundaryField.reactingWall.value%2520uniform.0> .
+
+<arcp://uuid,53b4a644-9620-4516-b638-be088a635d42/0/U?jsonpath=internalField.1.0&jsonpath=boundaryField.inertWall.value%2520uniform.0&jsonpath=boundaryField.reactingWall.value%2520uniform.0> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 <arcp://uuid,4e66d5e3-a6b8-4a2e-8f4a-32df3fbe7ece/0/U?jsonpath=internalField.1.1&jsonpath=boundaryField.inertWall.value%2520uniform.1&jsonpath=boundaryField.reactingWall.value%2520uniform.1> ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0" ;
+    emmo:INVERSE_OF_hasSpatialFirst <http://www.osp-core.com/cuds#a41d08b6-d3bc-423e-a0d6-8d262bd94725> .
+
+<arcp://uuid,57220b63-0b94-468a-9f32-769ddd6905a0/0/O2?jsonpath=boundaryField.inlet.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <arcp://uuid,74c9d91d-3650-4008-a3e7-84bd546ba705/0/O2?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<arcp://uuid,74c9d91d-3650-4008-a3e7-84bd546ba705/0/O2?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "0.432432432432432" ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#47ef9135-943f-439b-999c-8463e7b60058> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,57220b63-0b94-468a-9f32-769ddd6905a0/0/O2?jsonpath=boundaryField.inlet.type> .
+
+<arcp://uuid,8157fbad-df3e-40bc-9e65-f28aec5fa034/0/p?jsonpath=boundaryField.outlet.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <arcp://uuid,d1cb3ffb-878b-42a0-bfd9-58394bad6ac9/0/p?jsonpath=internalField.1&jsonpath=boundaryField.outlet.value.1> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> .
+
+<arcp://uuid,9e3a1287-424c-4a79-8350-f717b97eb0a5/0/T?jsonpath=boundaryField.inlet.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <arcp://uuid,b717c52c-d4ca-427a-bfe3-b3116ad99381/0/T?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,a9007ffb-8e8b-47e6-84c5-8b675b47c4e3/0/U?jsonpath=boundaryField.inlet.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedProfile"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#a41d08b6-d3bc-423e-a0d6-8d262bd94725> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<arcp://uuid,c6dea9b0-7c57-41f3-a568-0bc9be15592d/0/N2?jsonpath=boundaryField.inlet.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <arcp://uuid,4bbcd770-c8bb-4af1-b20e-a192a00d9173/0/N2?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<arcp://uuid,cb81e6c3-77f9-4774-ad2c-46d4e2799209/0/CO?jsonpath=boundaryField.inlet.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <arcp://uuid,051b6a8c-b66a-46d9-a48e-99d4204b592b/0/CO?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<arcp://uuid,d1cb3ffb-878b-42a0-bfd9-58394bad6ac9/0/p?jsonpath=internalField.1&jsonpath=boundaryField.outlet.value.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "100000" ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,8157fbad-df3e-40bc-9e65-f28aec5fa034/0/p?jsonpath=boundaryField.outlet.type> .
+
+<arcp://uuid,e3179739-8a43-4e53-90bb-4a47b603a2d2/0/T?jsonpath=boundaryField.reactingWall.type> a emmo:EMMO_140e4b4e_4bc6_4a66_862c_a3170d265c5d ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "catalyticWall"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <arcp://uuid,b717c52c-d4ca-427a-bfe3-b3116ad99381/0/T?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> .
+
+<arcp://uuid,e3f02e2c-15ae-4c16-85c4-9d38351fb7de/0/U?jsonpath=boundaryField.inertWall.type> a emmo:EMMO_77860f1f_47b3_4006_91b8_d4853be54fde ;
+    emmo:EMMO_23b579e1_8088_45b5_9975_064014026c42 "fixedValue"^^xsd:string ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#d3b23a45-262e-4167-a1f2-6b8567cf57df> ;
+    emmo:INVERSE_OF_hasBoundaryField <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<http://www.osp-core.com/cuds#1c56d296-487c-4bf4-ba2b-a7e7bcf8cc2c> a emmo:EMMO_7c055d65_2929_40e1_af4f_4bf10995ad50 ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <arcp://uuid,4bbcd770-c8bb-4af1-b20e-a192a00d9173/0/N2?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<http://www.osp-core.com/cuds#2806062f-45dc-4680-85ed-16a943b43e99> a emmo:EMMO_e14154dc_d85c_4f90_9e4e_7221270addee ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <arcp://uuid,0f37c63d-8c5b-45b3-b62c-337c02ad4a6b/constant/solverOptions?jsonpath=PhysicalModel.alfaCatalyst> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#47ef9135-943f-439b-999c-8463e7b60058> a emmo:EMMO_7c055d65_2929_40e1_af4f_4bf10995ad50 ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <arcp://uuid,74c9d91d-3650-4008-a3e7-84bd546ba705/0/O2?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<http://www.osp-core.com/cuds#4f91b687-25cd-453e-ab66-90c3d6d1eab2> a emmo:EMMO_bf457a7f_51b7_4fd3_9866_dfd395f65aae ;
+    emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f <arcp://uuid,4dda6338-3f4a-435c-a936-ccd2903e65ad/constant/thermophysicalProperties?jsonpath=kineticMechanism> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#ec6b837d-496b-4538-a959-455076068346> .
+
+<http://www.osp-core.com/cuds#76ea5922-5aa9-4911-8e98-da9925e9bb85> a emmo:EMMO_cbcf8fe6_6da6_49e0_ab4d_00f737ea9689 ;
+    emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f <arcp://uuid,1bad8363-1490-47a0-b082-54c43909cdd1/0/CO?jsonpath=FoamFile.object> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<http://www.osp-core.com/cuds#7ff59b06-c487-4be4-b0a5-6b2d5270371b> a emmo:EMMO_7c055d65_2929_40e1_af4f_4bf10995ad50 ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <arcp://uuid,051b6a8c-b66a-46d9-a48e-99d4204b592b/0/CO?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> .
+
+<http://www.osp-core.com/cuds#bb696a5b-516a-4c41-9260-22e0964f1baf> a emmo:EMMO_cbcf8fe6_6da6_49e0_ab4d_00f737ea9689 ;
+    emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f <arcp://uuid,7596e219-9bac-4dbb-b608-78a50849f63a/0/O2?jsonpath=FoamFile.object> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> .
+
+<http://www.osp-core.com/cuds#c64f3523-f90d-4f47-8890-83ffb7ed9f52> a emmo:EMMO_62bbf356_7ab0_464b_ace9_a582ad13c2d2 ;
+    emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f <arcp://uuid,b07c3d18-6f0a-4c8f-9208-5b54e22fc339/constant/solverOptions?jsonpath=PhysicalModel.energyEquation> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#ec6b837d-496b-4538-a959-455076068346> .
+
+<http://www.osp-core.com/cuds#e2ac663d-c6af-4b4d-bf76-9cca27746622> a emmo:EMMO_cbcf8fe6_6da6_49e0_ab4d_00f737ea9689 ;
+    emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f <arcp://uuid,b79c854a-20df-485b-96d4-d9b1a1d91542/0/N2?jsonpath=FoamFile.object> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> .
+
+<http://www.osp-core.com/cuds#e469c0a0-ea87-4ed8-a9c1-8a34abcbed6d> a emmo:EMMO_c21c197a_4509_4b5c_a89b_a2c41da9a19a ;
+    emmo:EMMO_17e27c22_37e1_468c_9dd7_95e137f73e7f <arcp://uuid,c8c2c14b-ac8f-4e7b-a32b-9cd48274a7e5/constant/turbulenceProperties?jsonpath=RAS.RASModel> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <http://www.osp-core.com/cuds#ec6b837d-496b-4538-a959-455076068346> .
+
+<arcp://uuid,b717c52c-d4ca-427a-bfe3-b3116ad99381/0/T?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> a emmo:EMMO_18d180e4_5e3e_42f7_820c_e08951223486 ;
+    emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 "900" ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,9e3a1287-424c-4a79-8350-f717b97eb0a5/0/T?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,e3179739-8a43-4e53-90bb-4a47b603a2d2/0/T?jsonpath=boundaryField.reactingWall.type> .
+
+<http://www.osp-core.com/cuds#a41d08b6-d3bc-423e-a0d6-8d262bd94725> a emmo:EMMO_2ff07b07_c447_490f_903a_f6a72a12d7bf ;
+    emmo:EMMO_2a9fcd79_bc67_4b1a_8e64_9dfe505a0007 <arcp://uuid,53b4a644-9620-4516-b638-be088a635d42/0/U?jsonpath=internalField.1.0&jsonpath=boundaryField.inertWall.value%2520uniform.0&jsonpath=boundaryField.reactingWall.value%2520uniform.0> ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,a9007ffb-8e8b-47e6-84c5-8b675b47c4e3/0/U?jsonpath=boundaryField.inlet.type> .
+
+<http://www.osp-core.com/cuds#d3b23a45-262e-4167-a1f2-6b8567cf57df> a emmo:EMMO_0329f1f5_8339_4ce4_8505_a264c6d606ba ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <http://www.osp-core.com/cuds#fdd04559-99f4-4cbb-b913-d2159893a309> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> ;
+    emmo:INVERSE_OF_hasSpatialDirectPart <arcp://uuid,261e0037-8ef5-4197-b5b2-81d32b86ec5b/0/U?jsonpath=boundaryField.reactingWall.type>,
+        <arcp://uuid,e3f02e2c-15ae-4c16-85c4-9d38351fb7de/0/U?jsonpath=boundaryField.inertWall.type> .
+
+<http://www.osp-core.com/cuds#fdd04559-99f4-4cbb-b913-d2159893a309> a emmo:EMMO_2ff07b07_c447_490f_903a_f6a72a12d7bf ;
+    emmo:EMMO_2a9fcd79_bc67_4b1a_8e64_9dfe505a0007 <arcp://uuid,0381c208-2905-40bd-9e14-c03a8e61401d/0/U?jsonpath=internalField.1.0&jsonpath=boundaryField.inlet.direction.0> ;
+    emmo:EMMO_8785be5a_2493_4b12_8f39_31907ab11748 <arcp://uuid,35790962-cdd9-4c81-97df-2f3697a803e9/0/U?jsonpath=internalField.1.1&jsonpath=boundaryField.inlet.direction.1>,
+        <arcp://uuid,5fed935a-5817-49a9-a523-a1dbbe686149/0/U?jsonpath=internalField.1.2&jsonpath=boundaryField.inlet.direction.2> ;
+    emmo:INVERSE_OF_hasQuantityValue <http://www.osp-core.com/cuds#d3b23a45-262e-4167-a1f2-6b8567cf57df> .
+
+<http://www.osp-core.com/cuds#ec6b837d-496b-4538-a959-455076068346> a emmo:EMMO_4456a5d2_16a6_4ee1_9a8e_5c75956b28ea ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#4f91b687-25cd-453e-ab66-90c3d6d1eab2>,
+        <http://www.osp-core.com/cuds#89ea686c-934c-4e8b-a6a5-b6d1e6e1f0b9>,
+        <http://www.osp-core.com/cuds#c64f3523-f90d-4f47-8890-83ffb7ed9f52>,
+        <http://www.osp-core.com/cuds#e469c0a0-ea87-4ed8-a9c1-8a34abcbed6d> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> a emmo:EMMO_6ae53a82_2034_4145_8f42_96805132f0af ;
+    emmo:EMMO_129e88a6_9847_4e2e_b26d_c7f39cc2fc62 <http://www.osp-core.com/cuds#2806062f-45dc-4680-85ed-16a943b43e99>,
+        <http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b>,
+        <http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5>,
+        <http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700>,
+        <http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108>,
+        <http://www.osp-core.com/cuds#d3b23a45-262e-4167-a1f2-6b8567cf57df>,
+        <http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65>,
+        <http://www.osp-core.com/cuds#ec6b837d-496b-4538-a959-455076068346>,
+        <http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> .
+
+<http://www.osp-core.com/cuds#5f3f63c8-2d77-4d06-a595-c6337cec1d3b> a emmo:EMMO_affe07e4_e9bc_4852_86c6_69e26182a17f ;
+    emmo:EMMO_0b6aed4c_6719_4080_b180_41ad411aaf4a <arcp://uuid,5157902d-b74c-42ae-a369-8258ac9bd1e2/0/T?jsonpath=boundaryField.wedge2.type>,
+        <arcp://uuid,5dda0167-e7c1-468a-af57-92b8409841e6/0/T?jsonpath=boundaryField.wedge3.type>,
+        <arcp://uuid,9e3a1287-424c-4a79-8350-f717b97eb0a5/0/T?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,a24bfda0-8b9e-4cd8-8045-fc2c5aa3bb39/0/T?jsonpath=boundaryField.inertWall.type>,
+        <arcp://uuid,bd24ab44-9440-45c2-9388-012f34dcea06/0/T?jsonpath=boundaryField.wedge4.type>,
+        <arcp://uuid,c03c9975-922e-4b64-a678-ff3d4a821bbb/0/T?jsonpath=boundaryField.wedge1.type>,
+        <arcp://uuid,dd1c64b6-50c8-46ab-97c2-fe21ae46e974/0/T?jsonpath=boundaryField.outlet.type>,
+        <arcp://uuid,e3179739-8a43-4e53-90bb-4a47b603a2d2/0/T?jsonpath=boundaryField.reactingWall.type> ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <arcp://uuid,b717c52c-d4ca-427a-bfe3-b3116ad99381/0/T?jsonpath=internalField.1&jsonpath=boundaryField.inlet.value.1&jsonpath=boundaryField.reactingWall.value.1> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#9328353f-87ae-45ca-af95-7fb67350d700> a emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989 ;
+    emmo:EMMO_0b6aed4c_6719_4080_b180_41ad411aaf4a <arcp://uuid,03fd4f94-2e7f-4f09-b9a2-9b5f852120cc/0/p?jsonpath=boundaryField.reactingWall.type>,
+        <arcp://uuid,13d1a514-808b-4331-870d-89bd02247d1a/0/p?jsonpath=boundaryField.wedge3.type>,
+        <arcp://uuid,2dddff1b-64df-43ea-b581-6760c9f8f44e/0/p?jsonpath=boundaryField.wedge4.type>,
+        <arcp://uuid,5717960d-2364-42a8-b1f5-62f4c0e7f64d/0/p?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,77434632-717a-4d7d-8360-c246e5a7e35f/0/p?jsonpath=boundaryField.inertWall.type>,
+        <arcp://uuid,8157fbad-df3e-40bc-9e65-f28aec5fa034/0/p?jsonpath=boundaryField.outlet.type>,
+        <arcp://uuid,a343e09e-b6bb-4c62-b8d1-4f15c36a482f/0/p?jsonpath=boundaryField.wedge2.type>,
+        <arcp://uuid,ed1ed022-b280-46bc-b02a-9b3c646372b3/0/p?jsonpath=boundaryField.wedge1.type> ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <arcp://uuid,d1cb3ffb-878b-42a0-bfd9-58394bad6ac9/0/p?jsonpath=internalField.1&jsonpath=boundaryField.outlet.value.1> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#fd8bdec1-2389-4049-a542-160a83f20eff> a emmo:EMMO_0329f1f5_8339_4ce4_8505_a264c6d606ba ;
+    emmo:EMMO_0b6aed4c_6719_4080_b180_41ad411aaf4a <arcp://uuid,261e0037-8ef5-4197-b5b2-81d32b86ec5b/0/U?jsonpath=boundaryField.reactingWall.type>,
+        <arcp://uuid,36994eb4-4853-4dc8-8876-be5e73bc3a7c/0/U?jsonpath=boundaryField.wedge1.type>,
+        <arcp://uuid,65ca0f8b-739a-4fbd-a182-533e866302de/0/U?jsonpath=boundaryField.wedge2.type>,
+        <arcp://uuid,9bdef48a-8e87-421a-933e-b2e7bc831bdd/0/U?jsonpath=boundaryField.wedge4.type>,
+        <arcp://uuid,a9007ffb-8e8b-47e6-84c5-8b675b47c4e3/0/U?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,b3456df9-d41d-451a-be4d-b652dad59cc2/0/U?jsonpath=boundaryField.outlet.type>,
+        <arcp://uuid,e3f02e2c-15ae-4c16-85c4-9d38351fb7de/0/U?jsonpath=boundaryField.inertWall.type>,
+        <arcp://uuid,e9c34e22-cbfe-4385-9fb1-c26238a489da/0/U?jsonpath=boundaryField.wedge3.type> ;
+    emmo:EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0 <http://www.osp-core.com/cuds#a41d08b6-d3bc-423e-a0d6-8d262bd94725> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#6749e333-c19e-44ba-98d3-dbbf2e24f8d5> a emmo:EMMO_7efd64d1_05a1_49cd_a7f0_783ca050d4f3 ;
+    emmo:EMMO_0b6aed4c_6719_4080_b180_41ad411aaf4a <arcp://uuid,2496fae0-e28d-4104-b143-33c7ad77ed43/0/N2?jsonpath=boundaryField.inertWall.type>,
+        <arcp://uuid,30fa145e-fcd2-4c5d-9ffe-39fcdf4a9377/0/N2?jsonpath=boundaryField.wedge4.type>,
+        <arcp://uuid,3e67ffa0-c683-4a6e-a2e9-353e4707b273/0/N2?jsonpath=boundaryField.outlet.type>,
+        <arcp://uuid,687189a3-74a3-4547-bf0d-406a9142a862/0/N2?jsonpath=boundaryField.wedge3.type>,
+        <arcp://uuid,9a60f545-f66e-4867-aefb-fec25de6ed95/0/N2?jsonpath=boundaryField.wedge2.type>,
+        <arcp://uuid,af339cc9-f9ad-4d91-ab8e-866f827ff399/0/N2?jsonpath=boundaryField.wedge1.type>,
+        <arcp://uuid,c6dea9b0-7c57-41f3-a568-0bc9be15592d/0/N2?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,da71d76c-b415-4c45-835a-631c2e038502/0/N2?jsonpath=boundaryField.reactingWall.type> ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#1c56d296-487c-4bf4-ba2b-a7e7bcf8cc2c>,
+        <http://www.osp-core.com/cuds#e2ac663d-c6af-4b4d-bf76-9cca27746622> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#a85e1c6b-9474-4203-b042-623a8988d108> a emmo:EMMO_7efd64d1_05a1_49cd_a7f0_783ca050d4f3 ;
+    emmo:EMMO_0b6aed4c_6719_4080_b180_41ad411aaf4a <arcp://uuid,1dfb0d1b-3f34-4dc7-8a31-f97c490fd7ec/0/O2?jsonpath=boundaryField.reactingWall.type>,
+        <arcp://uuid,544bc64e-facf-44ef-b6f1-ea8c90beef50/0/O2?jsonpath=boundaryField.wedge2.type>,
+        <arcp://uuid,57220b63-0b94-468a-9f32-769ddd6905a0/0/O2?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,5a3e47a7-6ba6-4af1-b8f5-34029e1abc6d/0/O2?jsonpath=boundaryField.wedge1.type>,
+        <arcp://uuid,72087328-222f-409f-8959-1930d9c29e07/0/O2?jsonpath=boundaryField.inertWall.type>,
+        <arcp://uuid,8cef2727-a79e-46b9-971f-7a7362504513/0/O2?jsonpath=boundaryField.wedge3.type>,
+        <arcp://uuid,c765f4af-00fd-4ad7-a10f-7f8826c2db91/0/O2?jsonpath=boundaryField.outlet.type>,
+        <arcp://uuid,def9b05f-b381-4d49-9d2b-e225c36965c9/0/O2?jsonpath=boundaryField.wedge4.type> ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#47ef9135-943f-439b-999c-8463e7b60058>,
+        <http://www.osp-core.com/cuds#bb696a5b-516a-4c41-9260-22e0964f1baf> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .
+
+<http://www.osp-core.com/cuds#e44f9108-a97b-4a08-8f33-3bad2a580c65> a emmo:EMMO_7efd64d1_05a1_49cd_a7f0_783ca050d4f3 ;
+    emmo:EMMO_0b6aed4c_6719_4080_b180_41ad411aaf4a <arcp://uuid,2540be71-40a6-4edd-995b-89bdd81c344d/0/CO?jsonpath=boundaryField.wedge3.type>,
+        <arcp://uuid,416706fe-93ee-4a08-8065-cf10e4ef818d/0/CO?jsonpath=boundaryField.wedge1.type>,
+        <arcp://uuid,657c6b86-b427-4ff2-b289-a2b06e4f2ed7/0/CO?jsonpath=boundaryField.wedge4.type>,
+        <arcp://uuid,81adf873-ae73-4dd2-a978-2e25cffe2c9a/0/CO?jsonpath=boundaryField.outlet.type>,
+        <arcp://uuid,b35753ba-39a5-4b7f-9099-923c59d9472d/0/CO?jsonpath=boundaryField.wedge2.type>,
+        <arcp://uuid,cb81e6c3-77f9-4774-ad2c-46d4e2799209/0/CO?jsonpath=boundaryField.inlet.type>,
+        <arcp://uuid,ee70b503-8b75-475b-85cb-7510f06630de/0/CO?jsonpath=boundaryField.inertWall.type>,
+        <arcp://uuid,f3e660f6-b00f-4939-88a5-83315790f1bf/0/CO?jsonpath=boundaryField.reactingWall.type> ;
+    emmo:EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe <http://www.osp-core.com/cuds#76ea5922-5aa9-4911-8e98-da9925e9bb85>,
+        <http://www.osp-core.com/cuds#7ff59b06-c487-4be4-b0a5-6b2d5270371b> ;
+    emmo:INVERSE_OF_hasCalculationInput <http://www.osp-core.com/cuds#cb7821c2-d1d0-4b26-a38e-b86f66b717f5> .

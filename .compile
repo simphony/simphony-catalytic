@@ -1,0 +1,38 @@
+
+#Compulsory path
+export EIGEN_LIBRARY_PATH=/usr/include/Eigen
+export BOOST_LIBRARY_PATH=/usr/include/boost
+#export MKL_PATH=
+#/opt/intel/oneapi/mkl/latest/
+
+# ON/OFF MKL
+export MKL_SUPPORT='-DOPENSMOKE_USE_MKL=0'
+
+# ON/OFF ISAT
+export ISAT_SUPPORT='-DOPENSMOKE_USE_ISAT=1'
+
+## DO NOT MODIFY
+#In case MKL are activated
+if [ $MKL_SUPPORT = '-DOPENSMOKE_USE_MKL=1' ]
+then
+    export MKL_LIBS='-Wl,--start-group $(MKL_PATH)/lib/intel64/libmkl_intel_lp64.a $(MKL_PATH)/lib/intel64/libmkl_core.a $(MKL_PATH)/lib/intel64/libmkl_sequential.a -Wl,--end-group -lpthread -lm'
+else
+    export MKL_LIBS=''
+fi
+
+export OF="${WM_PROJECT_VERSION%%.*}0"
+export OFVERSION="-DOFVERSION=$OF"
+
+# Python include
+PYTHON_INC=$(python3.8-config --cflags)
+#Get rid of -g option
+PYTHON_INC=${PYTHON_INC//'-g'/}
+export PYTHON_INCLUDE=$PYTHON_INC
+export PYTHON_LIBS="$(python3.8-config --ldflags) -lpython3.8"
+
+#Static linking of libraries
+export CATFOAM_LIBS='-Wl,--start-group -Wl,-Bstatic -lISAT -lboost_program_options -lboost_system -lboost_filesystem -lboost_regex -lboost_date_time -Wl,--end-group -Wl,-Bdynamic'
+export BOOST_LIBS='-Wl,--start-group -Wl,-Bstatic -lboost_program_options -lboost_system -lboost_filesystem -lboost_regex -lboost_date_time -Wl,--end-group -Wl,-Bdynamic'
+
+# External solvers
+export EXTERNAL_ODE_SOLVERS='-DOPENSMOKE_USE_ODEPACK=0 -DOPENSMOKE_USE_RADAU=0 -DOPENSMOKE_USE_DASPK=0 -DOPENSMOKE_USE_MEBDF=0 -DOPENSMOKE_USE_SUNDIALS=0'

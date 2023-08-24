@@ -1,0 +1,13 @@
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleArrhenius;
+        reaction        "CO = CO";
+        A               0;
+        beta            0;
+        Ta              0;
+    }
+}
+Tlow            300;
+Thigh           5000;

@@ -1,0 +1,123 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     6.2;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 0.001;
+
+// System dimensions
+hin 2;
+
+Lin   5;
+Lout  40;
+
+
+// DO NOT CHANGE
+angle #calc "degToRad(2.)";
+a #calc "$hin*tan($angle)";
+e #calc "-$a";
+
+b #calc "$hin";
+c #calc "$Lin";
+d #calc "$Lout";
+
+// DISCRETIZATION
+delta 0.05;
+iny #calc "std::ceil($hin/$delta)";
+
+inz #calc "std::ceil($Lin/($delta*5))";
+otz #calc "std::ceil($Lout/($delta*5))";
+
+vertices
+(
+	(0		0		0)
+  	(0		0		0)
+	($a		$b		0)
+	($e		$b		0)
+
+	(0		0		$c)
+  	(0		0		$c)
+	($a		$b		$c)
+	($e		$b		$c)
+
+
+	(0		0		$d)
+  	(0		0		$d)
+	($a		$b		$d)
+	($e		$b		$d)
+
+);
+
+edges
+(
+
+);
+
+blocks
+(
+
+	hex (0 1 2 3 4 5 6 7)   	      (1 $iny $inz)  simpleGrading (1 0.25 0.5)
+
+
+	hex (4 5 6 7 8 9 10 11)  	     (1 $iny $otz) simpleGrading (1 0.25 3)
+
+
+);
+
+patches
+(
+ 	patch inlet
+	(
+		(0 1 2 3)
+	)
+
+	patch outlet
+	(
+		(8 9 10 11)
+	)
+
+	wall inertWall
+	(
+		(2 3 7 6)
+	)
+
+	wall reactingWall
+	(
+		(6 7 11 10)
+	)
+
+	wedge wedge1
+	(
+		(0 4 7 3)
+	)
+	wedge wedge2
+	(
+		(4 8 11 7)
+	)
+	wedge wedge3
+	(
+		(5 1 2 6)
+	)
+	wedge wedge4
+	(
+		(9 5 6 10)
+	)
+
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //
