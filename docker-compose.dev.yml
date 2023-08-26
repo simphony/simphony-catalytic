@@ -12,6 +12,7 @@ services:
         - WRAPPER_DEPS_EXTRA=$WRAPPER_DEPS_EXTRA
         - WRAPPER_DEPS_INSTALL=$WRAPPER_DEPS_INSTALL
         - INSTALL_SLURM=$INSTALL_SLURM
+        - SLURM_VERSION=$SLURM_VERSION
       target: "${DOCKER_BUILD_TARGET:-develop}"
     tty: True
     entrypoint: /bin/bash

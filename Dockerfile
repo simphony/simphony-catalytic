@@ -22,17 +22,18 @@ ARG GITHUB_ACCESS_TOKEN
 ARG EIGEN_REPO
 ARG CATALYTIC_FOAM_REPO
 ARG INSTALL_SLURM
+ARG SLURM_VERSION
 
 WORKDIR /tmp
-RUN if [[ "$INSTALL_SLURM" = "yes" ]] ; \
+RUN if [ "$INSTALL_SLURM" = "yes" ] ; \
     then \
-        apt install -y munge \
-        wget https://download.schedmd.com/slurm/slurm-23.02.4.tar.bz2 -o slurm.tar.bz2 \
-        tar --bzip -x -f  slurm.tar.bz2 \
-        cd  slurm.tar.bz2 \
-        ./configure \
-        make \
-        make install ;\
+        apt install -y munge && \
+        wget "https://download.schedmd.com/slurm/slurm-${SLURM_VERSION}.tar.bz2" && \
+        tar --bzip -x -f "slurm-${SLURM_VERSION}.tar.bz2" && \
+        cd "slurm-${SLURM_VERSION}" && \
+        ./configure && \
+        make && \
+        make install ; \
      else \
         echo 'Slurm will not be installed.' ; \
     fi
