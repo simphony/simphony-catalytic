@@ -15,12 +15,15 @@ RUN apt-get update && apt-get install -y \
     g++ apt-transport-https ca-certificates gnupg \
     software-properties-common build-essential \
     libboost-all-dev librapidxml-dev libeigen3-dev \
-    gfortran nodejs slurm-wlm
+    gfortran nodejs
 
 # retrieve build args
 ARG GITHUB_ACCESS_TOKEN
 ARG EIGEN_REPO
 ARG CATALYTIC_FOAM_REPO
+ARG INSTALL_SLURM
+
+RUN if [[ "$INSTALL_SLURM" = "yes" ]] ; then apt install -y slurm-wlm ; else echo 'Slurm will not be installed.' ; fi
 
 # make code base in homedir read-/write-/executable to USER
 RUN chmod -R 0777 /home/openfoam
