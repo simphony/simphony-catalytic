@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     g++ apt-transport-https ca-certificates gnupg \
     software-properties-common build-essential \
     libboost-all-dev librapidxml-dev libeigen3-dev \
-    gfortran nodejs
+    gfortran nodejs slurm-wlm
 
 # retrieve build args
 ARG GITHUB_ACCESS_TOKEN
