@@ -23,7 +23,19 @@ ARG EIGEN_REPO
 ARG CATALYTIC_FOAM_REPO
 ARG INSTALL_SLURM
 
-RUN if [[ "$INSTALL_SLURM" = "yes" ]] ; then apt install -y slurm-wlm ; else echo 'Slurm will not be installed.' ; fi
+WORKDIR /tmp
+RUN if [[ "$INSTALL_SLURM" = "yes" ]] ; \
+    then \
+        apt install -y munge \
+        wget https://download.schedmd.com/slurm/slurm-23.02.4.tar.bz2 -o slurm.tar.bz2 \
+        tar --bzip -x -f  slurm.tar.bz2 \
+        cd  slurm.tar.bz2 \
+        ./configure \
+        make \
+        make install ;\
+     else \
+        echo 'Slurm will not be installed.' ; \
+    fi
 
 # make code base in homedir read-/write-/executable to USER
 RUN chmod -R 0777 /home/openfoam
