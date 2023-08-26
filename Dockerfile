@@ -22,8 +22,21 @@ ARG GITHUB_ACCESS_TOKEN
 ARG EIGEN_REPO
 ARG CATALYTIC_FOAM_REPO
 ARG INSTALL_SLURM
+ARG SLURM_VERSION
 
-RUN if [[ "$INSTALL_SLURM" = "yes" ]] ; then apt install -y slurm-wlm ; else echo 'Slurm will not be installed.' ; fi
+WORKDIR /tmp
+RUN if [ "$INSTALL_SLURM" = "yes" ] ; \
+    then \
+        apt install -y munge && \
+        wget "https://download.schedmd.com/slurm/slurm-${SLURM_VERSION}.tar.bz2" && \
+        tar --bzip -x -f "slurm-${SLURM_VERSION}.tar.bz2" && \
+        cd "slurm-${SLURM_VERSION}" && \
+        ./configure && \
+        make && \
+        make install ; \
+     else \
+        echo 'Slurm will not be installed.' ; \
+    fi
 
 # make code base in homedir read-/write-/executable to USER
 RUN chmod -R 0777 /home/openfoam
