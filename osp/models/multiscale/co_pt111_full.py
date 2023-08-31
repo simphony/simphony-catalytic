@@ -82,7 +82,6 @@ class COPt111FullscaleModel:
                 emmo.ReferenceRegion,
                 emmo.RandomSeed,
                 emmo.MolecularGeometry,
-                crystallography.UnitCell,
             ]:
                 input_cuds = self.pes_exploration.cuds.get(
                     oclass=oclass, rel=emmo.hasInput
