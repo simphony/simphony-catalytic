@@ -5,6 +5,7 @@ from urllib.parse import parse_qs
 from osp.core.namespaces import emmo
 from osp.core.session import SimWrapperSession
 from osp.models.catalytic.utils import check_arcp, wrap_arcp
+from osp.models.utils.general import get_download
 
 from .catalyticfoam_engine import CatalyticFoamEngine, settings
 
@@ -68,6 +69,8 @@ class SimCatalyticFoamSession(SimWrapperSession):
             self._check_for_value(cuds)
         elif cuds.is_a(emmo.AdjustableSimulationTimeStep):
             self._wrap_arcp(cuds, "yes")
+        elif cuds.is_a(emmo.PKLFile):
+            self._engine.pkl = get_download(str(cuds.uid), as_file=True)
 
     def _make_new_chemical(self, composition: "Cuds") -> None:
         species = composition.get(oclass=emmo.ChemicalSpecies)

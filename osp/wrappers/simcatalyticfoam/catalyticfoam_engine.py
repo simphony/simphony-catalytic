@@ -3,7 +3,7 @@ import os
 import shutil
 import subprocess  # nosec
 import tempfile
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 import osp.dictionaries.catalyticFoam as case
 
@@ -37,6 +37,7 @@ class CatalyticFoamEngine:
                 directory=runtime,
                 filename=tar,
             )
+        self._pkl: Optional[str] = None
         self._parse_files = dict()
         self._config: dict = config
         self._current_process: subprocess.Popen = None
@@ -66,6 +67,12 @@ class CatalyticFoamEngine:
             with open(path, "w+") as file:
                 file_content = serialize(content)
                 file.write(file_content)
+        if self._pkl:
+            logger.info("Will use custom PKL for catalytic wall: `%s`", self._pkl)
+            dest_pkl = os.path.join(
+                self._config["directory"], "ml_ExtraTrees_forCFD.pkl"
+            )
+            shutil.copy(self._pkl, dest_pkl)
         for command in self._config["commands"]:
             cmd = self._prepare_command(command)
             logger.info(
@@ -221,3 +228,7 @@ class CatalyticFoamEngine:
     @property
     def tarball(cls):
         return f"{cls._config['filename']}.tar"
+
+    @property
+    def pkl(cls):
+        return cls._pkl
