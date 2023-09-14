@@ -36,6 +36,9 @@ class SimCatalyticFoamSession(SimWrapperSession):
     # OVERRIDE
     def _apply_added(self, root_object, buffer) -> None:
         for obj in buffer.values():
+            if obj.is_a(emmo.TarballFile):
+                self._engine.input_tarball = get_download(str(obj.uid), as_file=True)
+        for obj in buffer.values():
             self._wrap(obj)
 
     # OVERRIDE
