@@ -2,8 +2,9 @@ import logging
 import os
 import shutil
 import subprocess  # nosec
+import tarfile
 import tempfile
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 import osp.dictionaries.catalyticFoam as case
 
@@ -37,6 +38,8 @@ class CatalyticFoamEngine:
                 directory=runtime,
                 filename=tar,
             )
+        self._pkl: Optional[str] = None
+        self._input_tarball: Optional[str] = None
         self._parse_files = dict()
         self._config: dict = config
         self._current_process: subprocess.Popen = None
@@ -66,6 +69,12 @@ class CatalyticFoamEngine:
             with open(path, "w+") as file:
                 file_content = serialize(content)
                 file.write(file_content)
+        if self._pkl:
+            logger.info("Will use custom PKL for catalytic wall: `%s`", self._pkl)
+            dest_pkl = os.path.join(
+                self._config["directory"], "ml_ExtraTrees_forCFD.pkl"
+            )
+            shutil.copy(self._pkl, dest_pkl)
         for command in self._config["commands"]:
             cmd = self._prepare_command(command)
             logger.info(
@@ -221,3 +230,42 @@ class CatalyticFoamEngine:
     @property
     def tarball(cls):
         return f"{cls._config['filename']}.tar"
+
+    @property
+    def input_tarball(cls):
+        return cls._input_tarball
+
+    @input_tarball.setter
+    def _set_tarball(self, value):
+        self._input_tarball = value
+        logger.info("Received new value for case directory to be used: `%s`.", value)
+        if "gz" in value:
+            mode = "r:gz"
+        elif "bz2" in value:
+            mode = "r:bz2"
+        else:
+            mode = "r"
+        logger.info(
+            "Will remove previous files in runtime directory: `%s`",
+            self._config["directory"],
+        )
+        shutil.rmtree(self._config["directory"])
+        logger.info(
+            "Will untar provided file in to runtime directory: `%s`",
+            self._config["directory"],
+        )
+        allowed_members = settings.allowed_members.strip().split(";")
+        with tarfile.open(value, mode=mode) as file:
+            # Iterate over the members and validate
+            for member in file.getmembers():
+                if member.name in allowed_members:
+                    file.extract(
+                        member, path=self._config["directory"], set_attrs=False
+                    )
+                else:
+                    logger.warning("Skipping member: %s", member.name)
+        logger.info("Untaring complete.")
+
+    @property
+    def pkl(cls):
+        return cls._pkl

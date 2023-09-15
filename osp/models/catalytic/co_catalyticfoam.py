@@ -248,6 +248,12 @@ class COCatalyticFOAMModel:
                 calc.add(self._make_species(species), rel=emmo.hasCalculationInput)
             calc.add(self._make_continuum_model(), rel=emmo.hasCalculationInput)
             calc.add(self._make_catalyist_amount(), rel=emmo.hasCalculationInput)
+            if self.species_from_upload:
+                pkl = emmo.PKLFile(uid=self.species_from_upload)
+                calc.add(pkl, rel=emmo.hasCalculationInput)
+            if self.patches_from_upload:
+                tar = emmo.TarballFile(uid=self.patches_from_upload)
+                calc.add(tar, rel=emmo.hasCalculationInput)
         file = tempfile.NamedTemporaryFile(suffix=".ttl")
         export_cuds(session, file.name)
         self._uuid = get_upload(file)

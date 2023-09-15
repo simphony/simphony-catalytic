@@ -53,6 +53,14 @@ class CatalyticFoamSettings(BaseSettings):
         E.g. `fixedValue` for a Dirichlet boundary condition.""",
     )
 
+    allowed_members: str = Field(
+        "0;constant;kinetic;system;CatalyticReactors;ml_ExtraTrees_forCFD.pkl",
+        description="""If an tar-file is used as custom use case directory, the
+                                  `;`-seprated values in the provided string are the only members which
+                                  are allowed to be extracted from the tarball-file (due to security reasons,
+                                  see [B202:tarfile_unsafe_members] for reference.)""",
+    )
+
 
 class ReaxProSettings(ModelSettings, CatalyticFoamSettings):
     """General Reaxpro wrapper settings"""
