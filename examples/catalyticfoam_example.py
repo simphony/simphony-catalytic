@@ -1,11 +1,6 @@
 import json
 import os
 
-os.environ["REAXPRO_MINIO_USER"] = "rootname"
-os.environ["REAXPRO_MINIO_PASSWORD"] = "rootname123"
-os.environ["REAXPRO_MINIO_ENDPOINT"] = "172.17.0.3:9000"
-
-
 from osp.core.namespaces import cuba
 from osp.core.utils import pretty_print
 from osp.models.catalytic.co_catalyticfoam import COCatalyticFOAMModel
