@@ -2,11 +2,6 @@ import json
 import os
 
 from osp.core.namespaces import crystallography, cuba, emmo
-
-os.environ["REAXPRO_MINIO_USER"] = "rootname"
-os.environ["REAXPRO_MINIO_PASSWORD"] = "rootname123"
-os.environ["REAXPRO_MINIO_ENDPOINT"] = "172.17.0.3:9000"
-
 from osp.models.multiscale.co_pt111_full import COPt111FullscaleModel
 from osp.wrappers.simams.simams_session import SimamsSession
 from osp.wrappers.simcatalyticfoam.simcatalyticfoam import SimCatalyticFoamSession
